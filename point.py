@@ -6,7 +6,7 @@ History
     Functions __repr__ and __str__ are updated to be more flexible and robust.
 
   November 10, 2015
-    Add a key member to the class 
+    Add a key member to the class
 
 Contact:
 Ningchuan Xiao
@@ -15,6 +15,11 @@ Columbus, OH
 """
 
 __author__ = "Ningchuan Xiao <ncxiao@gmail.com>"
+
+
+import sys
+if sys.version_info > (3,):
+    long = int
 
 from math import sqrt
 class Point():

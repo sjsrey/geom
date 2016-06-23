@@ -10,5 +10,5 @@ psegs = [Segment(i, Point(s[i][0][0], s[i][0][1]),
          for i in range(len(s))]
 
 ints = intersections(psegs)
-print "There are", len(ints), "intersection points:"
-print ints
+print("There are", len(ints), "intersection points:")
+print(ints)

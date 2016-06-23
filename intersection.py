@@ -1,10 +1,10 @@
 from linesegment import *
 from sideplr import *
 
-def getIntersectionPoint(s1, s2):       
+def getIntersectionPoint(s1, s2):
     """
     Calculates the intersection point of two line segments
-    s1 and s2. This function assumes s1 and s2 intersect. 
+    s1 and s2. This function assumes s1 and s2 intersect.
     Intersection must be tested before calling this function.
     """
     x1 = float(s1.lp0.x)
@@ -40,12 +40,12 @@ def test_intersect(s1, s2):
     # testing: s2 endpoints on the same side of s1
     lsign = sideplr(s2.lp0, s1.lp0, s1.rp)
     rsign = sideplr(s2.rp, s1.lp0, s1.rp)
-    if lsign*rsign > 0:                   
+    if lsign*rsign > 0:
         return False
     # testing: s1 endpoints on the same side of s2
     lsign = sideplr(s1.lp0, s2.lp0, s2.rp)
-    rsign = sideplr(s1.rp, s2.lp0, s2.rp) 
-    if lsign*rsign > 0:                   
+    rsign = sideplr(s1.rp, s2.lp0, s2.rp)
+    if lsign*rsign > 0:
         return False
     return True
 
@@ -58,6 +58,6 @@ if __name__ == "__main__":
     s2 = Segment(1, p3, p4)
     s3 = Segment(2, p1, p2)
     if test_intersect(s1, s2):
-        print getIntersectionPoint(s1, s2)
-        print s1==s2
-        print s1==s3
+        print(getIntersectionPoint(s1, s2))
+        print(s1==s2)
+        print(s1==s3)
